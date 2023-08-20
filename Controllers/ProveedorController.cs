@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DistribuidoraALM.DataAccess;
 using DistribuidoraALM.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ namespace DistribuidoraALM.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProveedorController : ControllerBase
     {        
         private readonly ISupplierRepository _repository;

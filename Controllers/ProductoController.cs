@@ -11,7 +11,7 @@ namespace DistribuidoraALM.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+    [Authorize]
     public class ProductoController : ControllerBase
     {        
         private readonly IMapper _mapper;
